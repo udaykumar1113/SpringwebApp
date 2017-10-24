@@ -14,9 +14,12 @@ public class Author
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
+	public Author() {
+		super();
+	}
 	private String firstName;
 	private String lastName;
-	@ManyToMany
+	@ManyToMany(mappedBy="authors")
 	private Set<Book> books= new HashSet<Book>();
 	public String getFirstName() {
 		return firstName;
