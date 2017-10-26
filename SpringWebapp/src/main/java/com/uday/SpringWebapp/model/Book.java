@@ -27,14 +27,12 @@ public class Book
 	@JoinTable(name="author_books", joinColumns=@JoinColumn(name="book_id"), 
 	                                inverseJoinColumns=@JoinColumn(name="author_id"))
 	private Set<Author> authors=new HashSet<Author>();
-	public Book(Long id, String title, String isbn, String publisher, Set<Author> authors) 
+	public Book(String title, String isbn, String publisher) 
 	{
 		super();
-		this.id = id;
 		this.title = title;
 		this.isbn = isbn;
 		this.publisher = publisher;
-		this.authors = authors;
 	}
 	public Long getId() {
 		return id;

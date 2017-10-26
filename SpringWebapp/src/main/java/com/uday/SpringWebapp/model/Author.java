@@ -39,12 +39,10 @@ public class Author
 	public void setBooks(Set<Book> books) {
 		this.books = books;
 	}
-	public Author(Long id, String firstName, String lastName, Set<Book> books) {
+	public Author(String firstName, String lastName) {
 		super();
-		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.books = books;
 	}
 	public Long getId() {
 		return id;
