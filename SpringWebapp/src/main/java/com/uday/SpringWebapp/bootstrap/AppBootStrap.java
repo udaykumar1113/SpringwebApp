@@ -6,8 +6,8 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
-import com.uday.Spring.repositories.AuthorRepository;
-import com.uday.Spring.repositories.BookRepository;
+import com.uday.SpringWebapp.Repositories.AuthorRepository;
+import com.uday.SpringWebapp.Repositories.BookRepository;
 import com.uday.SpringWebapp.model.Author;
 import com.uday.SpringWebapp.model.Book;
 
@@ -44,9 +44,9 @@ public class AppBootStrap implements ApplicationListener<ContextRefreshedEvent>
 		Book book3=new Book("Harry potter 2","1894567","Bloomsbury");
 		author2.getBooks().add(book2);
 		author2.getBooks().add(book3);
+		book2.getAuthors().add(author2);
+		book3.getAuthors().add(author2);
 		
-		//System.out.println(author1);
-		//System.out.println(authorRepository);
 		authorRepository.save(author1);
 		bookRepository.save(book1);
 		

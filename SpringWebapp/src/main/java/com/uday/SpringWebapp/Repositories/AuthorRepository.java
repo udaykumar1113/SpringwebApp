@@ -1,4 +1,4 @@
-package com.uday.Spring.repositories;
+package com.uday.SpringWebapp.Repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
