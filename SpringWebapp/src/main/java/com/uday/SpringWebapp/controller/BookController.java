@@ -10,7 +10,6 @@ import com.uday.SpringWebapp.Repositories.BookRepository;
 public class BookController {	
 	private BookRepository bookRepository;	
 	public BookController(BookRepository bookRepository) {
-		super();
 		this.bookRepository = bookRepository;
 	}
 	@RequestMapping("/books")
